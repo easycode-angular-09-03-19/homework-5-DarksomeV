@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col col-6 mx-auto">
+      <ng-container *ngFor="let item of albums">
+        <app-album-item [item]="item"
+                        (outputDelete)="onOutputDelete($event)"
+                        (outputEdit)="onOutputEdit($event)"
+                        (outputCancel)="onOutputCancel($event)"
+        ></app-album-item>
+      </ng-container>
+    </div>
+  </div>
+</div>
